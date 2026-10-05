@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-username/your-repo.git'
+                git branch: 'main', url: 'https://github.com/dsshrey15-bits/jenkins-test.git'
             }
         }
 
@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'pytest -q'
+                sh 'python3 -m pytest -q'
             }
         }
 
