@@ -53,7 +53,7 @@ def get_client_summary(name, age, weight_kg, program_name):
 def home():
     return jsonify(
         {
-            "app": "ACEest Fitness & Gym",
+            "app": "BITS Pilani Student Fitness & Wellness API",
             "status": "ok",
             "programs": list(PROGRAMS.keys()),
         }

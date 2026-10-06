@@ -1,6 +1,6 @@
-# ACEest Fitness & Gym DevOps Assignment
+# BITS Pilani Student Fitness API
 
-This project implements a small Flask-based fitness management application for ACEest Fitness & Gym, along with CI/CD automation using GitHub Actions and a Jenkins pipeline example.
+This project implements a Flask-based fitness and wellness API for a BITS Pilani student context, along with CI/CD automation using GitHub Actions and a Jenkins pipeline example.
 
 ## Project overview
 
@@ -26,7 +26,7 @@ The application exposes a minimal API that supports:
    ```bash
    python app.py
    ```
-5. Open the app at:
+5. Check the API health endpoint at:
    ```text
    http://localhost:5000/
    ```

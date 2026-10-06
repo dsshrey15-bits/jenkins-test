@@ -26,8 +26,8 @@ def test_get_client_summary():
 
 def test_home_endpoint():
     client = app.test_client()
-    response = client.get("/")
+    response = client.get("/", headers={"Accept": "text/html"})
     assert response.status_code == 200
     payload = response.get_json()
-    assert payload["app"] == "ACEest Fitness & Gym"
+    assert payload["app"] == "BITS Pilani Student Fitness & Wellness API"
     assert "Fat Loss" in payload["programs"]
