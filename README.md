@@ -68,9 +68,15 @@ The `Jenkinsfile` demonstrates how the build can be automated in Jenkins with th
 - checkout source code
 - install dependencies
 - run tests
+- analyze the Python application with SonarQube and enforce the quality gate
 - build Docker image
 
-This gives a second validation layer alongside GitHub Actions in a CI/CD environment.
+Before running this pipeline, configure the Jenkins SonarQube Scanner plugin with:
+- an authenticated SonarQube server named `SonarQube`
+- a scanner installation named `SonarScanner`
+- a SonarQube webhook pointing to `https://<jenkins-url>/sonarqube-webhook/`
+
+The project key and scan scope are defined in `sonar-project.properties`. The pipeline waits up to one hour for the SonarQube quality gate and stops before building the Docker image if the gate fails.
 
 ## Key endpoints
 
