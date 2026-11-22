@@ -73,10 +73,9 @@ The `Jenkinsfile` demonstrates how the build can be automated in Jenkins with th
 
 Before running this pipeline, configure the Jenkins SonarQube Scanner plugin with:
 - an authenticated SonarQube server named `SonarQube`
-- a scanner installation named `SonarScanner`
 - a SonarQube webhook pointing to `https://<jenkins-url>/sonarqube-webhook/`
 
-The project key and scan scope are defined in `sonar-project.properties`. The pipeline waits up to one hour for the SonarQube quality gate and stops before building the Docker image if the gate fails.
+The SonarScanner CLI must be installed at `/opt/sonar-scanner` on the Jenkins agent. The project key and scan scope are defined in `sonar-project.properties`. The pipeline waits up to one hour for the SonarQube quality gate and stops before building the Docker image if the gate fails.
 
 ## Key endpoints
 
